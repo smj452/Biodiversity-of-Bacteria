@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image" href="https://media.npr.org/assets/img/2013/03/06/bluemarble3k-smaller-nasa_custom-644f0b7082d6d0f6814a9e82908569c07ea55ccb-s1500-c85.jpg">
+  <title>Belly Button Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<style>
+  .container h1, p, h5{
+      color:rgb(250, 240, 240);
+  }
+  .panel {
+    background-image: none;
+    background-color: darkcyan;
+    color: white;
+
+}
+</style>
+<body style="background-color:darkcyan;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" style="background-image: url(https://d2c7ipcroan06u.cloudfront.net/wp-content/uploads/2019/12/bacteria123-1024x576.jpg); background-size: 100%; height: 100%;">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <p><h4><b>Labs across the country  have had success in synthesizing meat from algae, fungi, and microorganisms found on plant roots. Our lab has partnered with Improbable Beef, a food startup to research candidate species. Our aim is to discover and document new bacteria. In particular, we are interested in bacterial species that have the ability to synthesize proteins that taste like beef. The human body is a source of thousands of types of bacteria, and different parts of the body harbor different species.</p></h4></b>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well" style="background-color:rgb(27, 80, 110);">
+          <h5><strong> Subject ID No.:</strong></h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge" ></div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <p><em><b><h4>The chart displays the top 10 bacteria found in the humans belly button 
+        and the name of the corresponding bacteria. The Demographic info provides
+        the candidate's background based on their ID's. Hovering over the bubble 
+        chart displays the name of the bacteria.</h4></b>  </em>
+      </p>
+    </div>
+      <div class="col-md-12">
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
